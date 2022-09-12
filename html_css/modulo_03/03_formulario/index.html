@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Formulario</h1>
+
+  <form action="login.html" method="GET">
+    <label for="name">Nome: <input type="text" name="name" placeholder="Digite seu nome">
+    </label>
+    
+    <label for="password">Senha: <input type="password" name="password" placeholder="Digite a senha">
+    </label>
+    
+    <label for="email">
+      Email: <input type="email" name="email" placeholder="Digite seu email">
+    </label>
+
+    <label for="sexo">Sexo:
+      Masculinho:<input type="radio" name="sexo"> Feminino:<input type="radio" name="sexo">
+    </label>
+    
+    <label for="nascimento">
+      Nacimento: <input type="date" name="nascimento">
+    </label>
+    
+    <label for="cidade">
+      Cidade: <input type="text" name="cidade" placeholder="Digite a cidade">
+    </label>
+    
+    <label for="estado">
+      estado: <select name="estado" id="">
+        <option default>Selecione um estado</option>
+        <option value="SP">São Paulo</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="MR">Maranhão</option>
+        <option value="AL">Alagoas</option>
+        <option value="ES">Espirito Santos</option>
+        <option value="SC">Santa Catarina</option>
+      </select>
+    </label>
+    
+    <textarea name="frase" id="" cols="30" rows="5" placeholder="Digite mais sobre você..."></textarea>
+    
+    <button>Cadastrar</button>
+  </form>
+  
+</body>
+</html>

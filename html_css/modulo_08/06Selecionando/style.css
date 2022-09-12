@@ -1,0 +1,12 @@
+input, a {
+  display: block;
+  margin-bottom: 20px;
+}
+
+[required] {
+  background-color: red;
+}
+
+input[type=password] {
+  background-color: orange;
+}

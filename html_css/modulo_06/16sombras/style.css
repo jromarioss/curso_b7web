@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+}
+
+.exemplo {
+  margin: 50px auto;
+  width: 150px;
+  height: 150px;
+  /* background-color: red; */
+  /* box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.411); */
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.432);
+}
+/* 
+1 valor horizontal, positivo direita,
+2 valor vertical, postivo baixo,
+3 valor esfumaçamento
+*/

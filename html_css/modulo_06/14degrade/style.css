@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+}
+
+#exemplo {
+  width: 500px;
+  height: 200px;
+  margin: 50px auto;
+  background-color: red;
+  background: linear-gradient(90deg ,green, blue);
+}

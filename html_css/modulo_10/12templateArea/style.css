@@ -1,0 +1,31 @@
+.container {
+  background-color: gray;
+  display: grid;
+  gap: 5px;
+  grid-template-areas: 
+    "item1 item1 item2"
+    "item3 . item2" /* o ponto deixa vazio */
+    "item4 item4 item4"
+  ;
+}
+
+.item {
+  background-color: blue;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+}
+.item1 {
+  grid-area: item1;
+}
+.item2 {
+  grid-area: item2;
+}
+.item3 {
+  grid-area: item3;
+}
+.item4 {
+  grid-area: item4;
+}

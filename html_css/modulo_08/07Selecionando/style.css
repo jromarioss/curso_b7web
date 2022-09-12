@@ -1,0 +1,34 @@
+input, a {
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* começa */
+a[href^="https"] {
+  background-color: aqua;
+}
+
+a[href^="http:"] {
+  background-color: blueviolet;
+}
+
+[required] {
+  background-color: red;
+}
+
+input[type=password] {
+  background-color: orange;
+}
+
+a[href*="whatsapp"] {
+  background-color: green;
+}
+
+a[href*="youtube"] {
+  background-color: rgb(148, 67, 67);
+}
+
+/* termina */
+a[href$=".br/"] {
+  background-color: rgb(23, 255, 2);
+}

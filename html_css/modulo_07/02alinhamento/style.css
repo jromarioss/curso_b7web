@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: #ccc;
+  margin: 10px;
+}
+
+.div1 {
+  flex: 1;
+  margin: 10px;
+  padding: 10px;
+  background-color: #ff0000;
+}
+
+.div2 {
+  flex: 1;
+  margin: 10px;
+  padding: 10px;
+  background-color: #ff0000;
+}
+
+.div3 {
+  flex: 1;
+  margin: 10px;
+  padding: 10px;
+  background-color: #ff0000;
+}
+
+.div4 {
+  flex: 3;
+  margin: 10px;
+  padding: 10px;
+  background-color: #ff0000;
+}
+
+/* 
+flex 1 tamanho padrao
+flex 2 tamanho dobro do 1
+flex 3 tamanha tripo do 1
+*/

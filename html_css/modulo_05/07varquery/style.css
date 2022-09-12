@@ -1,0 +1,26 @@
+:root {
+  --bg-color: #000000;
+  --bg-second: red;
+  --font-color: #fff;
+  --font-size: 25px;
+}
+body {
+  background-color: var(--bg-color);
+  font-size: var(--font-size);
+}
+h1 {
+  color: var(--font-color);
+}
+.container {
+  background-color: var(--bg-second);
+  color: var(--font-color);
+}
+
+@media (min-width: 450px) {
+  :root {
+    --font-size: 15px;
+  }
+  body {
+    font-size: var(--font-size);
+  }
+}

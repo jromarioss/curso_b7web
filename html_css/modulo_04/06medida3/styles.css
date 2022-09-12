@@ -1,0 +1,17 @@
+
+.box {
+  width: 50%;
+  height: 400px;
+  background-color: #999;
+}
+.box-interno {
+  width: 50%;
+  height: 50%;
+  background-color: #333;
+}
+/* 
+  Relativa PORCENTAGEm
+  %: Referente ao espaço disponivel
+  ex: basea-se no tipo de fonte a altura da letra x
+  ch: basea-se na fonte courier
+*/

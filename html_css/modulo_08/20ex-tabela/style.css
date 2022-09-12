@@ -1,0 +1,12 @@
+table {
+  border: 1px solid gray;
+}
+
+table th {
+  background-color: lightgray;
+  font-weight: bold;
+}
+
+tr:nth-child(odd) {
+  background-color: greenyellow;
+}

@@ -1,0 +1,24 @@
+table {
+  width: 600px;
+}
+table th {
+  border: 1px solid black;
+}
+table thead {
+  background-color: aquamarine;
+}
+table tbody {
+  background-color: beige;
+}
+table tfoot {
+  background-color: yellowgreen;
+}
+th, td {
+  padding: 5px;
+}
+td:hover {
+  background-color: rgb(171, 106, 233);
+}
+tbody tr:nth-child(even) {
+  background-color: gray;
+}

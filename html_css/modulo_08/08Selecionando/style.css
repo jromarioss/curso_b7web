@@ -1,0 +1,8 @@
+div {
+  margin: 50px;
+  height: 30px;
+}
+/* selecionar div vazia */
+div:empty {
+  background-color: aqua;
+}

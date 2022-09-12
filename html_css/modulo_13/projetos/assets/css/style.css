@@ -1,0 +1,316 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Oswald:wght@400;700&display=swap');
+
+/* 
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Oswald', sans-serif; 
+*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+/* ================ HEADER =============== */
+header .line {
+  background-color: #117050;
+  height: 10px;
+}
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+.bar {
+  width: 168px;
+  height: 22px; 
+  background-color: #006341;
+}
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 95px;
+  font-weight: bold;
+  line-height: 100px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 45px;
+  margin-block: 20px;
+}
+.button {
+  border: 2px solid #454545;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 3px;
+  color: #454545;
+  text-decoration: none;
+  transition: all .8s;
+}
+.button:hover {
+  background-color: #454545;
+  color: white;
+}
+.header--area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+.header-left img {
+  width: 64px;
+  height: 64px;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+}
+.header-search form {
+  display: flex;
+}
+.header-search input {
+  font-size: 16px;
+  padding: 9px 13px;
+  border: 1px solid #999999;
+  outline: 0;
+  width: 100%;
+  max-width: 250px;
+}
+.header-search button {
+  border: 0;
+  background-color: transparent;
+  margin-left: -30px;
+  cursor: pointer;
+}
+.header-search button img {
+  width: 16px;
+  height: 16px;
+}
+.header-menu {
+  margin-left: 50px;
+  cursor: pointer;
+}
+.header-menu img {
+  width: 24px;
+  height: 24px;
+}
+/* ================ MAIN =============== */
+.main {
+  width: 95vw;
+  margin: auto;
+}
+/* ================ SECTION-BANNER =============== */
+.banner {
+  background-image: url('../imagem/bg.jpg');
+  background-position: center;
+  background-size: cover;
+  padding-block: 90px;
+  padding-left: 30px;
+}
+.banner-images {
+  margin-top: 60px;
+}
+.banner-images img {
+  width: 148px;
+  height: 148px;
+  border: 6px solid #117050;
+  border-radius: 50%;
+  margin-right: 35px;
+}
+/* ================ SECTION-AREA-1 =============== */
+.area1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr)
+}
+.area1-content {
+  padding: 80px;
+}
+.area1-quote {
+  margin-bottom: 30px;
+}
+.area1-text {
+  margin-bottom: 50px;
+  line-height: 25px;
+}
+.area1-img1 {
+  height: 350px;
+  background-image: url('../imagem/f2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.area1-img2 {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  background-image: url('../imagem/f1.jpg');
+  background-position: center;
+  background-size: cover;
+}
+/* ================ SECTION-AREA-2 =============== */
+.area2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr)
+}
+.area2-content {
+  padding: 80px;
+}
+.area2-text {
+  margin-bottom: 50px;
+  line-height: 25px;
+}
+.area2-img1 {
+  height: 450px;
+  background-image: url('../imagem/f4.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.area2-img2 {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  background-image: url('../imagem/f3.jpg');
+  background-position: center;
+  background-size: cover;
+}
+/* ================ SECTION-AREA-3 =============== */
+.area3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr)
+}
+.area3-content {
+  background-image: url('../imagem/bg2.jpg');
+  background-position: left;
+  background-size: cover;
+  padding: 200px 80px;
+}
+.area3-text {
+  margin-bottom: 50px;
+  line-height: 25px;
+}
+.area3-img1 {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  background-image: url('../imagem/f5.jpg');
+  background-position: center;
+  background-size: cover;
+}
+/* ================ SECTION-AREA-4 =============== */
+.area4 {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+}
+.area4-content {
+  background-color: #E8E9EE;
+  padding: 150px 80px;
+}
+.area4-text {
+  margin-bottom: 50px;
+  line-height: 25px;
+}
+.area4-img1 {
+  background-image: url('../imagem/bg3.jpg');
+  background-position: left;
+  background-size: cover;
+}
+/* ================ SECTION-AREA-5 =============== */
+.area5 {
+  height: 700px;
+  background-image: url('../imagem/bg4.jpg');
+  background-position: center;
+  background-size: cover;
+}
+/* ================ FOOTER =============== */
+.footer {
+  background-color: #333333;
+  text-align: center;
+  color: white;
+  padding: 50px;
+}
+/* ================ LAPTOP-1024PX =============== */
+@media (max-width: 1024px) {
+  .container {
+    padding-inline: 20px;
+  }
+}
+/* ================ TABLET-768PX =============== */
+@media (max-width: 768px) {
+  .container {
+    padding-inline: 25px;
+  }
+  .banner {
+    padding-left: 10px;
+  }
+  .main {
+    width: 100vw;
+  }
+  .area1 {
+    grid-template-columns: 2fr 1fr;
+  }
+  .area2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .area3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* ================ PHONE-425PX =============== */
+@media (max-width: 425px) {
+  .container {
+    padding-inline: 15px;
+  }
+  .header-search input {
+    max-width: 100px;
+  }
+  .banner h1 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .banner-images img {
+    width: 80px;
+    height: 80px;
+    border: 3px solid #117050;
+    margin-right: 5px;
+  }
+  .area1,
+  .area2,
+  .area3,
+  .area4 {
+    grid-template-columns: 1fr;
+  }
+  .area1-content,
+  .area2-content,
+  .area3-content,
+  .area3-content {
+    padding: 40px;
+  }
+  .area5 {
+    height: 280px;
+  }
+  .footer {
+    padding: 25px;
+  }
+}
+/* ================ PHONE-320PX =============== */
+@media (max-width: 320px) {
+  .container {
+    padding-left: 5px;
+  }
+  .banner {
+    background-position: 500px;
+  }
+  .banner h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .banner-images img {
+    width: 70px;
+    height: 70px;
+    border: 3px solid #117050;
+    margin-right: 5px;
+  }
+  .area4 {
+    max-width: 320px;
+  }
+  .area4-content {
+    padding: 100px 70px;
+  }
+}

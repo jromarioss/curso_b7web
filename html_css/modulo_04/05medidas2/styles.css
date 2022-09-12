@@ -1,0 +1,19 @@
+body{
+  font-size: 20px
+}
+h1 {
+  font-size: 3em;
+}
+.box {
+  font-size: 1em;
+}
+.box-interno {
+  width: 10em;
+  height: 10em;
+  background-color: #999;
+}
+/* 
+  Relativa Fonte
+  em: baseia-se na fonte do elemento pai se for o pai for 20px 1em sera 20px.
+  rem: baseia-se no elemento html
+*/

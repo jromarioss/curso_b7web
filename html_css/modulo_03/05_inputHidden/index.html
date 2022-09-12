@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fielset</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form action="/" method="GET">
+    <!-- hidden aqui coloca geralmente -->
+    <input type="hidden" name="country" value="BR">
+
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+      <label for="">
+        Primeiro Nome: <br>
+        <input type="text" name="name" required minlength="15">
+      </label>
+      <br>
+      <label for="">
+        Sobrenome: <br>
+        <input type="text" name="lastname" required>
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Dados Profissionais</legend>
+      <label for="">
+        Nome da empresa: <br>
+        <input type="text" name="companyname">
+      </label>
+      <br>
+      <label for="">
+        Cargo da empresa: <br>
+        <input type="text" name="companyname">
+      </label>
+    </fieldset>
+    <input type="submit" value="Cadastrar" id="btn">
+  </form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #ccc;
+  margin: 10px;
+  align-content: flex-end;
+}
+
+.container div {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #ff0000;
+}

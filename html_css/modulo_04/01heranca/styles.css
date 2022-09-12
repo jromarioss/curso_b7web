@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+}
+.container {
+  width: calc(100% - 20px);
+  height: 200px;
+  background-color: #ccc;
+  color: #ff0000;
+  font-size: 20px;
+  border: 2px solid green;
+}
+.container strong {
+  color: #ff0000;
+  border: 2px solid black;
+}

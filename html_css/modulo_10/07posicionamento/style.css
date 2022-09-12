@@ -1,0 +1,18 @@
+.container {
+  height: 800px;
+  background-color: gray;
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  background-color: blue;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+}

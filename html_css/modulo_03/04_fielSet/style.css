@@ -1,0 +1,18 @@
+fieldset {
+  margin: auto;
+  background-color: #eee;
+  margin-bottom: 20px;
+  border: 2px solid rgb(216, 87, 87);
+  width: 200px;
+  text-align: center;
+}
+legend {
+  background-color: rgb(216, 87, 87);
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 5px;
+}
+#btn {
+  display: block;
+  margin: auto;
+}

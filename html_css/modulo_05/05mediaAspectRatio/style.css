@@ -1,0 +1,11 @@
+/* width/height */
+@media (aspect-ratio: 1/1) { /* só aplica quadrado */
+  body {
+    background-color: red;
+  }
+}
+@media (min-aspect-ratio: 4/2) { /* largura/altura */
+  body {
+    background-color: blue;
+  }
+}

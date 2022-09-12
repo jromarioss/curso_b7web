@@ -1,0 +1,21 @@
+.container {
+  height: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: center; */
+  background-color: #ccc;
+  margin: 10px;
+}
+
+/* 
+justify-contente alinhamento linha
+align item alinha na columa
+*/
+.div {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #ff0000;
+}

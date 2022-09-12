@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+}
+section {
+  height: 50px;
+  background-color: #777;
+}
+article {
+  height: 50px;
+  background-color: #999;
+}
+footer {
+  height: 100px;
+  background-color: #ccc;
+}

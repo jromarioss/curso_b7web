@@ -1,0 +1,18 @@
+#titulo {
+  color: blue;
+  font-size: 15px;
+  background-color: rgb(251, 255, 16);
+}
+.texto {
+  color: red;
+}
+a {
+  color: red;
+  font-size: 18px;
+}
+img {
+  width: 200px;}
+li {
+  font-weight: bold;
+  color: rgb(0, 139, 139);
+}

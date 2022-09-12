@@ -1,0 +1,15 @@
+
+.box {
+  background-color: #999;
+  height: 100vh;
+}
+.box-interno {
+  width: 50%;
+  height: 50%;
+  background-color: #333;
+}
+/* 
+  Relativa viewport
+  vh: referente o height da viewport
+  vw: referente o width
+*/

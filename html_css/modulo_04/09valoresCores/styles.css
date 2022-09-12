@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  background-color: blue;
+  color: hsla(50, 63%, 69%, 0.747);
+  
+}
+/* 
+  #fff
+  #00000
+  #000
+  rgb(0, 255, 255)
+  rgba(0, 255, 255, 0.1)
+  hsl(50, 63%, 69%)
+  hsla(50, 63%, 69%, 0.45)
+  currentColor pega cor do body
+*/

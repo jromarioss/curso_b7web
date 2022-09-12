@@ -1,0 +1,6 @@
+320 celular comun
+480 celular 5 polegada 
+760 tablet
+960 monitor pequeno
+1200 monitor 18polegadas
+1600 monitor full hd

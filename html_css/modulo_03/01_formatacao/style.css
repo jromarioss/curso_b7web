@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 50px;
+  font-size: 17px;
+  width: 50vw;
+}
+p {
+  color: blue;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: serif, Arial, Helvetica, sans-serif;
+  text-align: justify;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  word-spacing: 5px; /* espaçamento entre palavras */
+  line-height: 5px; /* autura linha  */
+  text-shadow: 5px 5px 5px red; /* right, bottom,  esfumaçamento*/
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
