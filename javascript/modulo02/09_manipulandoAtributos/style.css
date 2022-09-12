@@ -1,0 +1,10 @@
+.imagem {
+  width: 400px;
+  height: auto;
+}
+
+button {
+  margin-right: 15px;
+  padding: 10px;
+  font-weight: bold;
+}

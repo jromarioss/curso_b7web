@@ -1,0 +1,25 @@
+.vermelho {
+  background-color: red;
+  color: white;
+  padding-left: 10px;
+}
+
+.verde {
+  background-color: green;
+  color: white;
+  padding-left: 10px;
+}
+
+.azul {
+  background-color: blue;
+  color: white;
+  padding-left: 10px;
+}
+
+.oculto {
+  display: none;
+}
+
+#telefone {
+  display: none;
+}

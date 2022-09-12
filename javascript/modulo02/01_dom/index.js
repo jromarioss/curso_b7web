@@ -1,0 +1,1 @@
+document.getElementById("exemplo").innerHTML = "José Romário Soares dos Santos.";

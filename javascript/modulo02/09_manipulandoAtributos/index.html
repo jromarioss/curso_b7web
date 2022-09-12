@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulando atributos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img src="images/dog.jpg" alt="dog" class="imagem" data-animal="dog">
+  <br>
+  <button onclick="trocaImagem('dog.jpg', 'dog', 'dog')">Dog</button>
+  <button onclick="trocaImagem('gato.jpg', 'cat', 'cat')">Cat</button>
+
+  <button onclick="pegarAnimal()">Qual é o animal</button>
+
+  <script src="index.js"></script>
+</body>
+</html>
