@@ -1,0 +1,18 @@
+import { Router } from 'express';
+import * as HomeController from '../controllers/homeController';
+import * as InfoController from '../controllers/infoController';
+import * as UserController from '../controllers/userController';
+
+export const router = Router();
+
+router.get('/', HomeController.home);
+router.post('/novousuario', HomeController.novoUsuario);
+
+router.get('/contato', InfoController.contato);
+router.get('/sobre', InfoController.sobre);
+
+router.get('/nome', UserController.nome);
+router.get('/idade', UserController.idade);
+router.get('/idade-res', UserController.idadeAction);
+
+export default router;

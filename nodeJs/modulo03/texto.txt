@@ -1,0 +1,26 @@
+SERVIDOR = Software que é o próprio banco de dados.
+CLIENTE = Software que usa o servidor, ou seja, usa o banco de dados.
+
+- INSERIR dados
+- LER dados
+- ALTERAR dados
+- EXCLUIR dados
+
+SQL - Banco de dados RELACIONAL / tem relação
+NoSQL - Banco de dados NÃO RELACIONAL / não tem relação
+
+chave = usuarios
+-- nome
+-- sobrenome
+-- email
+-- cpf
+-- grupo interesse
+--- php
+--- js
+-----node
+--- eletronicos
+--- skate
+
+ORM = Obect Relational Mapper
+Mapeamento objeto relaciona 
+

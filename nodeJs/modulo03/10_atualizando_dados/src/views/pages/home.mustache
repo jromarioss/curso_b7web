@@ -1,0 +1,21 @@
+{{>partials/header }}
+  <h1>Página inicial HOME</h1>
+  <hr />
+  <fieldset>
+    <legend>Novo Usuário</legend>
+    <form method="POST" action="/novousuario">
+      <input type="text" name="name" placeholder="Digite um nome" /><br/>
+      <input type="text" name="age" placeholder="Digite a idade" /><br/>
+      <input type="submit" value="Inserir Usuário" />
+    </form>
+  </fieldset>
+
+  <hr/>
+  <h2>Usuários dos banco de dados</h2>
+  <ul>
+    {{#users }}
+      <li>{{id}}: Nome: {{ name }} - Idade: {{ age }}</li>
+    {{/users }}
+  </ul>
+  <hr />
+{{>partials/footer }}  

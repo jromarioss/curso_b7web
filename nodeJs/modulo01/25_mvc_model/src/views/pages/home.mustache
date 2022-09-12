@@ -1,0 +1,37 @@
+{{>partials/header }}
+  <h1>Página inicial HOME</h1>
+  <hr/>
+  {{#showOld }}
+    <p>Olá meu nome é {{ name }} {{ lastname }} e eu tenho {{ age }} anos.</p>
+  {{/showOld }}
+  {{^showOld }}
+    <p>Eae blz!</p>
+  {{/showOld }}
+
+  <hr/>
+  <h2>Produtos</h2>
+  <ul>
+    {{#produts }}
+      {{>partials/productItem }}
+    {{/produts }}
+  </ul>
+   <hr/>
+  <h2>Produtos Apartir de R$:20</h2>
+  <ul>
+    {{#expensiveList }}
+      {{>partials/productItem }}
+    {{/expensiveList }}
+  </ul>
+
+  <hr/>
+  <h2>Frase do Dia</h2>
+  <ul>
+    {{#frasesDoDia }}
+      <li>{{.}}</li>
+    {{/frasesDoDia }}
+    {{^frasesDoDia }}
+      <p>Não há frases hoje!</p>
+    {{/frasesDoDia }}
+  </ul>
+  <hr/>
+{{>partials/footer }}  

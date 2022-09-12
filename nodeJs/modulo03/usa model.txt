@@ -1,0 +1,3 @@
+1. Usar o model no controller par efetuar as modificações.
+2. criar métodos específicos dentro do própio model.
+3. Utilizando 'services' 

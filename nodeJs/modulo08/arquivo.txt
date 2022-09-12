@@ -1,0 +1,19 @@
+Introdução Autenticação
+
+Autenticação vs Autorização
+
+Autenticação é basicamento o ato de saber quem é que está tentando acessar.
+
+Autorização é basicamente o ato de verificar se o objeto ou requisitor pode acessar aquela área específica.
+
+Tipo de Autenticação
+- sligle factor authentication (SFA) = Autenticação em 1 fator.
+- Two factor authentication (2fa) = autenticação em 2 fatores.
+- Multi factor authentication (MFA) = Autenticação e, múltiplos fatores.
+- Single Sing-on (SSO) = Autenticação única "universal".
+
+- Basic Auth = BASE64
+- OAuth (1 e 2)
+-- OAuth 1 = Usar um terceiro para gerar um token
+-- OAuth 2 = OAuth 1 + RefreshToken
+-JWT (Json Web Token)
