@@ -1,0 +1,27 @@
+tsconfig.json
+
+tsc --init; criar arquivo tsconfig.js
+
+tsc = gera o ts em js, se acha arquivo ts ele copia um js;
+---------------------------------------------------
+arquivos compilar
+"exclude": [ //para não compilar ou copiar
+    "src/outo.ts"
+  ]
+------------------------------------------------------
+  "exclude": [ //exclui qualquer arquivo com dev 
+    "**/*.dev.ts"
+  ]
+}
+-----------------------------------------------------
+"include": [ // só filtra esse cara
+    "src/script.ts"
+  ]
+
+------------------------------------
+target a versão do Js es6
+
+lib 
+
+outdir cria os arquivo onde vc quer 
+rootdir mantem como padrao a pasta
