@@ -1,0 +1,5 @@
+Criar projeto em react:
+npx create-react-app 'nome do projeto' --template typescript
+
+Criar projeto em vite:
+npm init vite 'nome do projeto' --template react-ts
