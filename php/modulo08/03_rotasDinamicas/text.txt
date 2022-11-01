@@ -1,0 +1,15 @@
+M -> MODEL
+V -> VIEW
+C -> CONTROLLER
+
+- o usuário requisita a url site.com.br/sobre.
+- o mvc vai verificar se esta ROTA está estabelecida.
+- o mvc vai mandar a requisição para o CONTROLLERT da rota.
+-- Careggar um VIEW.
+-- Chamar um MODEL.
+
+CONTROLLER
+- MODEL
+- VIEW
+
+INSTALAR composer install
