@@ -1,33 +1,41 @@
 import React, { useState } from 'react';
 
-const App = () => {
+export function App() {
   const [name, setName] = useState('');
   const [lastName, setLastName] = useState('');
   const [age, setAge] = useState('');
 
-  const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setName(e.target.value);
+  function handleChangeName(event: React.ChangeEvent<HTMLInputElement>) {
+    setName(event.target.value);
   }
-  const handleLastName = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setLastName(e.target.value);
+
+  function handleChangeLastName(event: React.ChangeEvent<HTMLInputElement>) {
+    setLastName(event.target.value);
   }
-  const handleAge = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setAge(e.target.value);
+
+  function handleChangeAge(event: React.ChangeEvent<HTMLInputElement>) {
+    setAge(event.target.value);
   }
 
   return (
     <div>
-      <label>Nome: </label>
-      <input type="text" onChange={ handleName } /><br />
-      <label>Sobre Nome: </label>
-      <input type="text" onChange={ handleLastName } /><br />
-      <label>Idade: </label>
-      <input type="number" onChange={ handleAge } /><br />
-      <hr />
-      <p>Olá {`${name} ${lastName}`}, tudo bem?</p>
-      <p>Você tem { age }.</p>
+      <div>
+        Name:
+        <input type='text' value={name} onChange={handleChangeName} />
+      </div>
+
+      <div>
+        LastName:
+        <input type='text' value={lastName} onChange={handleChangeLastName} />
+      </div>
+
+      <div>
+        Age:
+        <input type='text' value={age} onChange={handleChangeAge} />
+      </div>
+      <hr/>
+      <p>Hello {!name ? <span>---</span> : `${name} ${lastName}`}, how are you?</p>
+      <p>You have {!age ? <span>---</span> : age }, years.</p>
     </div>
   );
 }
-
-export default App;

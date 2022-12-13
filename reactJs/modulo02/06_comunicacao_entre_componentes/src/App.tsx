@@ -1,17 +1,15 @@
-import { Botao } from './components/Botao';
+import { Button } from './components/Button';
 
-const App = () => {
-  let txt = "Clique no botão";
-
-  const botaoEventAction = (txt : string) => {
-    alert(`Frase do App: ${txt}`);
+export function App() {
+  
+  function buttonAction(txt: string) {
+    alert(`${txt} of App`);
   }
 
   return (
     <div>
-      <Botao text={ txt } clickFn={ botaoEventAction } />
+      <Button text='click on the button' onButtonAction={buttonAction}  />
     </div>
   );
 }
-
 export default App;

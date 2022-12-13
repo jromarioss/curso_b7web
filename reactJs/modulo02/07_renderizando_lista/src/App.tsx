@@ -1,26 +1,25 @@
-import { Pessoa } from './components/Pessoa';
+import { People } from './components/People';
 
-const App = () => {
+export function App() {
   let list = [
-    {name: 'José', age: 28},
-    {name: 'Pedro', age: 15},
-    {name: 'Maria', age: 55},
-    {name: 'Miguel', age: 3},
-    {name: 'Giovana', age: 24},
-    {name: 'Bruna', age: 32},
+    { id: 1, name: 'Maria', age: 20},
+    { id: 2, name: 'Pedro', age: 30},
+    { id: 3, name: 'Carlos', age: 15},
+    { id: 4, name: 'Julia', age: 19},
+    { id: 5, name: 'Miguel', age: 3}
   ];
+
 
   return (
     <div>
-      <h2>Lista de Presença</h2>
-      <hr />
+      <h2>Attendance list</h2>
       <ul>
-        {list.map((item, index) => (
-          <Pessoa key={ index } data={ item } />
-        ))}
+        {list.map(item => {
+          return (
+            <People key={item.id} data={item} />
+          );
+        })}
       </ul>
     </div>
   );
 }
-
-export default App;

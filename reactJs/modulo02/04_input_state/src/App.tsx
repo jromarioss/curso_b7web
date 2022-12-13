@@ -1,20 +1,18 @@
 import React, { useState } from 'react';
 
-const App = () => {
+export function App() {
   const [name, setName] = useState('');
 
-  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setName(e.target.value);
+  function handleInput(event: React.ChangeEvent<HTMLInputElement>) {
+    setName(event.target.value);
   }
 
   return (
     <div>
-      <label>Nome: </label>
-      <input type="text" value={ name } onChange={ handleInput } />
-      <hr />
-      <p>Seu nome: { name }</p>
+      Nome:
+      <input type='text' value={name} onChange={handleInput} />
+      <hr/>
+      Seu nome é: {name}
     </div>
   );
 }
-
-export default App;

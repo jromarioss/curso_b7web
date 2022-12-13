@@ -1,23 +1,24 @@
 import { useState } from 'react';
 
-const App = () => {
+export function App() {
+
   const [numero, setNumero] = useState(0);
 
-  const handleLess = () => {
-    setNumero(numero - 1);
+  function handleMinus() {
+    if (numero > 0) {
+      setNumero(numero - 1);
+    }
   }
 
-  const handleMore = () => {
+  function handleMore() {
     setNumero(numero + 1);
   }
 
   return (
     <div>
-      <button onClick={ handleLess }>-</button>
-      <p>{ numero }</p>
-      <button onClick={ handleMore }>+</button>
+      <button onClick={handleMinus}>-</button>
+      <div>{numero}</div>
+      <button onClick={handleMore}>+</button>
     </div>
   );
 }
-
-export default App;

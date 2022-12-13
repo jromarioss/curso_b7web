@@ -1,20 +1,21 @@
 import { useState } from 'react';
 
-const App = () => {
-  let [show, setShow] = useState(false);
+export function App() {
+  const [show, setShow] = useState(false);
 
-  const handleButton = () => {
+  function handleClick() {
     setShow(!show);
   }
 
   return (
     <div>
-      <button onClick={ handleButton }>{ show ? 'Ocultar' : 'Mostrar' }</button>
-      {show == true && 
-        <p>Bom dia!</p>
+      <button onClick={handleClick}>
+        {show ? 'hidden' : 'show'}
+      </button>
+
+      {show && 
+        <div>Any text...</div>
       }
     </div>
   );
 }
-
-export default App;
