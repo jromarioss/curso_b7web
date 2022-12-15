@@ -1,11 +1,11 @@
-.botao {
+.button {
   background-color: blue;
   color: white;
   padding: 10px 20px;
   border: 2px solid black;
   border-radius: 5px;
 }
-.botao:hover {
+.button:hover {
   background-color: red;
 }
 .square {

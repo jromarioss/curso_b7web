@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
-const App = () => {
+export function App() {
   const [color, setColor] = useState('red');
-  const [padding, setPadding] = useState(0);
+  const [padding, setPadding] = useState(10);
 
-  const handleClick = () => {
+  function handleClick() {
     setColor('green');
-    setPadding(20)
+    setPadding(20);
   }
 
   return (
@@ -14,9 +14,7 @@ const App = () => {
       <button
         onClick={ handleClick }
         style={{ backgroundColor: color, color: 'white', border: 'none', padding }}
-      >clique aqui</button>
+      >click here</button>
     </div>
   );
 }
-
-export default App;

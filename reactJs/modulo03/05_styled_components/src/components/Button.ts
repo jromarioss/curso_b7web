@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const Botao = styled.button`
+export const Button = styled.button`
   font-size: 40px;
 `;

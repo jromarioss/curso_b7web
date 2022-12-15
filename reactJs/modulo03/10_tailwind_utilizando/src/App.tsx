@@ -1,4 +1,4 @@
-const App = () => {
+export function App() {
   return (
     <div>
       <p className="bg-blue-400 text-red-700 font-bold p-3">Olá mundo de Tailwind</p>
@@ -6,5 +6,3 @@ const App = () => {
     </div>
   );
 }
-
-export default App;

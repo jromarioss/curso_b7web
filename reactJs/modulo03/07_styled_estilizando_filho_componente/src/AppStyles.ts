@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
-type ContainerProps = {
+interface ContainerProps {
   cor: string;
 }
+
 export const Container = styled.div<ContainerProps>`
-background-color: ${(props) => props.cor};
-color: white;
-padding: 20px;
+  background-color: ${(props) => props.cor};
+  color: white;
+  padding: 20px;
 
   span {
     font-weight: bold;
@@ -18,18 +19,20 @@ padding: 20px;
     color: white;
     text-decoration: none; 
     margin-right: 10px;
+
+    // & referencia a ele mesmo
     &:hover {
       color: yellow;
     }
   }
 `;
 
-type BotaoProps = {
+interface ButtonProps {
   small?: boolean;
   bg: string;
 }
 
-export const Botao = styled.button<BotaoProps>`
+export const Button = styled.button<ButtonProps>`
   font-size: ${(props) => props.small ? '15px' : '30px' };
   background-color: ${(props) => props.bg};
 `;

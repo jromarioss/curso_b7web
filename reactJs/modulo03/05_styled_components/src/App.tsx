@@ -1,15 +1,13 @@
-/* import { Botao } from './components/Botao';
+/* import { Button } from './components/Button';
 import { Container } from './components/Container'; */
 import * as C from './AppStyles';
 
 
-const App = () => {
+export function App() {
   return (
     <C.Container>
-      <p>Texto do Componente</p>
-      <C.Botao>Clique aqui</C.Botao>
+      <p>Component text</p>
+      <C.Button>Click here</C.Button>
     </C.Container>
   );
 }
-
-export default App;

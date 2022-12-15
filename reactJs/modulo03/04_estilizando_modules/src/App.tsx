@@ -1,11 +1,9 @@
-import { Botao } from './components/Botao';
+import { Button } from './components/Button';
 
-const App = () => {
+export function App() {
   return (
     <div>
-      <Botao />
+      <Button />
     </div>
   );
 }
-
-export default App;

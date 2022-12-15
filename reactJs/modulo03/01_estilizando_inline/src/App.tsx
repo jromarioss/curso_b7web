@@ -1,4 +1,4 @@
-const App = () => {
+export function App() {
   return (
     <div>
       <button style={{
@@ -9,9 +9,7 @@ const App = () => {
         width: '150px',
         height: '50px',
         fontSize: '20px'
-      }}>Clique aqui</button>
+      }}>Click here</button>
     </div>
   );
 }
-
-export default App;

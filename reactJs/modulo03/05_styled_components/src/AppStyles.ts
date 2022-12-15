@@ -6,6 +6,6 @@ color: white;
 padding: 20px;
 `;
 
-export const Botao = styled.button`
+export const Button = styled.button`
   font-size: 40px;
 `;

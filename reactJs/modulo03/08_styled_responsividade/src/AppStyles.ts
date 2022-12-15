@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-type ContainerProps = {
+interface ContainerProps {
   cor: string;
 }
+
 export const Container = styled.div<ContainerProps>`
   max-width: 800px;
   margin: auto;
@@ -21,6 +22,7 @@ export const Container = styled.div<ContainerProps>`
   .link {
     color: white;
     text-decoration: none;
+
     &:hover {
       color: yellow;
     }
@@ -36,12 +38,12 @@ export const Container = styled.div<ContainerProps>`
   }
 `;
 
-type BotaoProps = {
+interface ButtonProps {
   small?: boolean;
   bg: string;
 }
 
-export const Botao = styled.button<BotaoProps>`
+export const Button = styled.button<ButtonProps>`
   font-size: ${(props) => props.small ? '15px' : '30px' };
   background-color: ${(props) => props.bg};
 
