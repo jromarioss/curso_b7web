@@ -1,81 +1,98 @@
-import { useState } from 'react';
-import styles from './App.module.css';
-import poweredImage from './assets/powered.png';
-import { levels, calculateImc, Level } from './helpers/imc';
-import { GridItem } from './components/GridItem';
-import leftArrowImage from './assets/leftarrow.png';
+import { useState, ChangeEvent } from 'react';
+import { ThemeProvider } from 'styled-components';
 
-const App = () => {
+import { Header } from './components/Header';
+import { Items } from './components/Items';
+
+import { levels, LevelsType } from './helpers/imc';
+import { calculateImc } from './helpers/CalculateImc';
+
+import { Content, Grid, GridOne, Icon, LeftSide, RightSide } from './styles';
+import { GlobalStyle } from './styles/global';
+import { defaultTheme } from './styles/themes/default';
+
+import leftImg from './assets/leftarrow.png';
+
+export function App() {
   const [heightField, setHeightField] = useState<number>(0);
   const [weightField, setWeightField] = useState<number>(0);
-  const [toShow, setToShow] = useState<Level | null>(null);
+  const [showItem, setShowItem] = useState<LevelsType | null>(null);
 
-  const handleCalculateButton = () => {
+  function handleCalculateButton() {
     if (heightField && weightField) {
-      setToShow(calculateImc(heightField, weightField));
+      setShowItem(calculateImc(heightField, weightField));
     } else {
-      alert("Digite todos os campos...");
+      alert("Preencha todos os campos!");
     }
   }
 
-  const handleBackButton = () => {
-    setToShow(null);
+  function handleChangeHeight(event: ChangeEvent<HTMLInputElement>) {
+    setHeightField(parseFloat(event.target.value));
+  }
+
+  function handleChangeWeight(event: ChangeEvent<HTMLInputElement>) {
+    setWeightField(parseFloat(event.target.value));
+  }
+
+  function handleBackButton() {
+    setShowItem(null);
     setHeightField(0);
-    setWeightField(0);
+    setWeightField(0)
   }
 
   return (
-    <div className={ styles.main }>
-      <header>
-        <div className={ styles.headerContainer }>
-          <img src={ poweredImage } alt="logo b7web" width={ 150 }/>
-        </div>
-      </header>
-      <div className={ styles.container }>
-        <div className={ styles.leftSide}>
-          <h1>Calcule o seu IMC.</h1>
-          <p>
-            IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.
-          </p>
-          <input
-            type="number"
-            placeholder="Digite sua altura. Ex: 1.80 (em metros)"
-            value={ heightField > 0 ? heightField : '' }
-            onChange={ e => setHeightField(parseFloat(e.target.value)) }
-            disabled={ toShow ? true : false }
-          />
-          <input
-            type="number"
-            placeholder="Digite seu peso. Ex: 71.5 (em kg)"
-            value={ weightField > 0 ? weightField : '' }
-            onChange={ e => setWeightField(parseFloat(e.target.value)) }
-            disabled={ toShow ? true : false }
-          />
-          <button 
-            onClick={ handleCalculateButton }
-            disabled={ toShow ? true : false }
-          >Calcular</button>
-        </div>
-        <div className={ styles.rightSide}>
-          {!toShow &&
-            <div className={ styles.grid }>
-              { levels.map((item, key) => (
-                <GridItem key={ key } item={ item } />
-              ))}
-            </div>
-          }
-          { toShow &&
-            <div className={ styles.rightBig }>
-              <div className={ styles.rightArrow } onClick={ handleBackButton } >
-                <img src={ leftArrowImage } alt="icon arrow" width={ 25 } />
-              </div>
-              <GridItem item={ toShow } />
-            </div>
-          }
-        </div>
-      </div>
-    </div>
-  )
-}
+    <ThemeProvider theme={defaultTheme}>
+      <>
+        <Header />
 
-export default App;
+        <Content>
+          <LeftSide>
+            <h1>Calcule o seu IMC.</h1>
+            <p>
+              IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.
+            </p>
+
+            <input 
+              type='number'
+              placeholder='Digite sua altura. Ex: 1.5 (em metros)'
+              value={heightField > 0 ? heightField : ''}
+              onChange={handleChangeHeight}
+              disabled={showItem ? true : false}
+            />
+
+            <input 
+              type='number'
+              placeholder='Digite seu peso. Ex: 75.5 (em quilos)'
+              value={weightField > 0 ? weightField : ''}
+              onChange={handleChangeWeight}
+              disabled={showItem ? true : false}
+            />
+
+            <button onClick={handleCalculateButton} disabled={showItem ? true : false}>Calcular</button>
+          </LeftSide>
+
+          <RightSide>
+            {!showItem ?
+              <Grid>
+                {levels.map(item => {
+                  return (
+                    <Items key={item.title} item={item} />
+                  );
+                })}
+              </Grid>
+              :
+              <GridOne>
+                <Icon onClick={handleBackButton}>
+                  <img src={leftImg} alt='' width='25' />
+                </Icon>
+                <Items item={showItem} />
+              </GridOne>
+            }
+          </RightSide>
+        </Content>
+
+        <GlobalStyle />
+      </>
+    </ThemeProvider>
+  );
+}
