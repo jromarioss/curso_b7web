@@ -1,32 +1,28 @@
 import { useReducer } from 'react';
 
-type reducerState = {
+interface reducerState {
   count: number;
 }
-type reducerAction = {
+interface reducerAction {
   type: string;
 }
 
 const initialState = { count: 0 };
-const reducer = (state: reducerState, action: reducerAction) => {
-  switch(action.type) {
-    case 'ADD':
-      return { ...state, count: state.count + 1 };
-      break;
-    case 'DEL':
-      if (state.count > 0) {
-        return { ...state, count: state.count - 1 };
-      }
-      break;
-    case 'RESET':
-      return initialState;
-      break;
-  }
-  return state;
-}
 
-const App = () => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+export function App() {
+  const [state, dispatch] = useReducer((state: reducerState, action: reducerAction) => {
+    switch(action.type) {
+      case 'ADD':
+        return { ...state, count: state.count + 1 };
+      case 'DEL':
+        if (state.count > 0) {
+          return { ...state, count: state.count - 1 };
+        }
+      case 'RESET':
+        return initialState;
+    }
+    return state;
+  }, initialState);
 
   return (
     <div className="p-5">
@@ -38,5 +34,3 @@ const App = () => {
     </div>
   );
 }
-
-export default App;

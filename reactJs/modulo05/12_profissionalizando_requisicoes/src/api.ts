@@ -8,10 +8,10 @@ export const api = {
   },
   addNewPost: async  (title: string, body: string, userId: number) => {
     let response = await fetch(`${BASE}/posts`, {
-        method: 'POST',
-        body: JSON.stringify({ title, body, userId }),
-        headers: { 'Content-Type': 'applicaton/json' }
-      });
+      method: 'POST',
+      body: JSON.stringify({ title, body, userId }),
+      headers: { 'Content-Type': 'applicaton/json' }
+    });
 
     let json = await response.json();
     return json;

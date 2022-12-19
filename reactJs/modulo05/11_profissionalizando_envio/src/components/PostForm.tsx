@@ -1,22 +1,22 @@
 import { useState, ChangeEvent } from 'react';
 
-type Props = {
+interface Props {
   onAdd: (title: string, body: string) => void;
 }
 
-export const PostForm = ({ onAdd }: Props) => {
+export function PostForm({ onAdd }: Props) {
   const [addtitleText, setAddTitleText] = useState('');
   const [addBodyText, setAddBodyText] = useState('');
 
-  const handleAddTitleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  function handleAddTitleChange(e: ChangeEvent<HTMLInputElement>) {
     setAddTitleText(e.target.value);
   }
 
-  const handleAddBodyChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+  function handleAddBodyChange(e: ChangeEvent<HTMLTextAreaElement>) {
     setAddBodyText(e.target.value);
   }
 
-  const handleAddClick = async () => {
+  async function handleAddClick() {
     if (addtitleText && addBodyText) {
       onAdd(addtitleText, addBodyText);
     } else {

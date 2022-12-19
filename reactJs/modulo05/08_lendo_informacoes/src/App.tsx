@@ -1,7 +1,13 @@
 import { useEffect, useState } from 'react';
-import { Post } from './types/Posts';
 
-const App = () => {
+interface Post {
+  userId: number;
+  id: string;
+  title: string;
+  body: string;
+}
+
+export function App() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -9,10 +15,17 @@ const App = () => {
     loadPost();
   }, []);
 
-  const loadPost = async () => {
-    let response = await fetch('https://jsonplaceholder.typicode.com/posts');
-    let json = await response.json();
-    setPosts(json);
+  async function loadPost() {
+    try {
+      setLoading(true);
+      let response = await fetch('https://jsonplaceholder.typicode.com/posts');
+      let json = await response.json();
+      setPosts(json);
+      setLoading(false);
+    } catch(error) {
+      setLoading(false);
+      console.log(error);
+    }
   }
 
   return (
@@ -21,11 +34,11 @@ const App = () => {
       { !loading && posts.length > 0 && 
         <>
           <div>
-            {posts.map((item, index) => (
-              <div key={ index } className="mb-4 border-2 p-3">
-                <h4 className="font-bold">{ item.title }</h4>
-                <small># { item.id } - Usuário: { item.userId }</small>
-                <p>{ item.body }</p>
+            {posts.map((item) => (
+              <div key={item.id} className="mb-4 border-2 p-3">
+                <h4 className="font-bold">{item.title}</h4>
+                <small># {item.id} - Usuário: {item.userId}</small>
+                <p>{item.body}</p>
               </div>
             ))}
           </div>
@@ -39,5 +52,3 @@ const App = () => {
     </div>
   );
 }
-
-export default App;

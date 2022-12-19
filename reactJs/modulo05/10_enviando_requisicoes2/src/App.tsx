@@ -1,7 +1,13 @@
 import { ChangeEvent, useEffect, useState } from 'react';
-import { Post } from './types/Posts';
 
-const App = () => {
+interface Post {
+  userId: number;
+  id: string;
+  title: string;
+  body: string;
+}
+
+export function App() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -12,23 +18,28 @@ const App = () => {
     loadPost();
   }, []);
 
-  const loadPost = async () => {
-    setLoading(true);
-    let response = await fetch('https://jsonplaceholder.typicode.com/posts');
-    let json = await response.json();
-    setLoading(false);
-    setPosts(json);
+  async function loadPost() {
+    try {
+      setLoading(true);
+      let response = await fetch('https://jsonplaceholder.typicode.com/posts');
+      let json = await response.json();
+      setLoading(false);
+      setPosts(json);
+    } catch(error) {
+      setLoading(false);
+      console.log(error);
+    }
   }
 
-  const handleAddTitleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  function handleAddTitleChange(e: ChangeEvent<HTMLInputElement>) {
     setAddTitleText(e.target.value);
   }
 
-  const handleAddBodyChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+  function handleAddBodyChange(e: ChangeEvent<HTMLTextAreaElement>) {
     setAddBodyText(e.target.value);
   }
 
-  const handleAddClick = async () => {
+  async function handleAddClick() {
     if (addtitleText && addBodyText) {
       let response = await fetch("https://jsonplaceholder.typicode.com/posts", {
         method: 'POST',
@@ -78,8 +89,8 @@ const App = () => {
       { !loading && posts.length > 0 && 
         <>
           <div>
-            {posts.map((item, index) => (
-              <div key={ index } className="mb-4 border-2 p-3">
+            {posts.map((item) => (
+              <div key={ item.id } className="mb-4 border-2 p-3">
                 <h4 className="font-bold">{ item.title }</h4>
                 <small># { item.id } - Usuário: { item.userId }</small>
                 <p>{ item.body }</p>
@@ -96,5 +107,3 @@ const App = () => {
     </div>
   );
 }
-
-export default App;

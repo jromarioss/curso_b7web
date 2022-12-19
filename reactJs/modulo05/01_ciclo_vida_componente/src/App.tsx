@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react';
 
-const App = () => {
-  const [name, setName] = useState("José");
+export function App() {
+  const [name, setName] = useState('José');
 
   useEffect(() => {
-    alert("Executou");
+    alert('Executou');
   }, [name]);
 
-  const handleClick = () => {
-    setName("Pedro");
+  function handleClick() {
+    setName('Pedro');
   }
+
   return (
     <div>
       <p>nome: { name }</p>
@@ -17,5 +18,3 @@ const App = () => {
     </div>
   );
 }
-
-export default App;

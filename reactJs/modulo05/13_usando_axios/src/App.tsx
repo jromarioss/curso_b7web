@@ -1,10 +1,16 @@
 import { PostForm } from './components/PostForm';
 import { PostItem } from './components/PostItem';
 import { useEffect, useState } from 'react';
-import { Post } from './types/Posts';
 import { api } from './api';
 
-const App = () => {
+export interface Post {
+  userId: number;
+  id: string;
+  title: string;
+  body: string;
+}
+
+export function App() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -12,14 +18,19 @@ const App = () => {
     loadPost();
   }, []);
 
-  const loadPost = async () => {
-    setLoading(true);
-    let json = await api.getAllPosts();
-    setLoading(false);
-    setPosts(json);
+  async function loadPost() {
+    try {
+      setLoading(true);
+      let json = await api.getAllPosts();
+      setLoading(false);
+      setPosts(json);
+    } catch(error) {
+      setLoading(false);
+      console.log(error);
+    }
   }
 
-  const handleAddPost = async  (title: string, body: string) => {
+  async function handleAddPost(title: string, body: string) {
     let json = await api.addNewPost(title, body, 1);
     if (json.id) {
       alert("Post adicionado com sucesso.");
@@ -35,8 +46,8 @@ const App = () => {
       { !loading && posts.length > 0 && 
         <>
           <div>
-            {posts.map((item, index) => (
-              <PostItem data={ item }  key={ index }/>
+            {posts.map((item) => (
+              <PostItem data={ item }  key={ item.id }/>
             ))}
           </div>
         </>
@@ -49,5 +60,3 @@ const App = () => {
     </div>
   );
 }
-
-export default App;

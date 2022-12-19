@@ -1,7 +1,11 @@
 import { useState } from 'react';
-import { Movie } from './types/Movie';
 
-const App = () => {
+interface Movie {
+  titulo: string;
+  avatar: string;
+}
+
+export function App() {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -20,7 +24,7 @@ const App = () => {
       });
   } */
 
-  const loadMovies = async () => {
+  async function loadMovies() {
     try {
       setLoading(true);
       let response = await fetch('https://api.b7web.com.br/cinema/');
@@ -44,8 +48,8 @@ const App = () => {
         <>
           <p>Total de filmes: { movies.length }</p>
           <div className="grid grid-cols-6 gap-2">
-          { movies.map((item, index) => (
-            <div key={ index }>
+          { movies.map((item) => (
+            <div key={ item.titulo }>
               <img src={ item.avatar } alt="imagem filme" className="w-32 block" />
               <h3>{ item.titulo }</h3>
             </div>
@@ -56,5 +60,3 @@ const App = () => {
     </div>
   );
 }
-
-export default App;

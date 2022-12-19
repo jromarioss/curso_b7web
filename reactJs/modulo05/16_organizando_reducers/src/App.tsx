@@ -1,7 +1,6 @@
-import { useContagem } from './hooks/contagem'
+import { useContagem } from './reducers/contagem';
 
-
-const App = () => {
+export function App() {
   const [contagem, ctDispatch] = useContagem();
 
   return (
@@ -14,5 +13,3 @@ const App = () => {
     </div>
   );
 }
-
-export default App;
