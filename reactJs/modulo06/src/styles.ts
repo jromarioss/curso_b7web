@@ -1,14 +1,14 @@
-import styled  from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 750px;
+  max-width: 47rem;
   margin: auto;
   display: flex;
-  padding: 50px 0;
+  padding: 3.125rem 0;
   font-family: Arial, Helvetica, sans-serif;
 
-  @media (max-width: 768px) {
+  @media(max-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -18,8 +18,8 @@ export const Info = styled.div`
   flex-direction: column;
   width: auto;
 
-  @media (max-width: 768px) {
-    margin-bottom: 50px;
+  @media(max-width: 768px) {
+    margin-bottom: 3.125rem;
     align-items: center;
   }
 `;
@@ -30,9 +30,9 @@ export const LogoLink = styled.a`
 
 export const InfoArea = styled.div`
   width: 100%;
-  margin: 10px 0;
+  margin: 0.625rem 0;
 
-  @media (max-width: 768px) {
+  @media(max-width: 768px) {
     display: flex;
     justify-content: space-around;
     text-align: center;
@@ -44,18 +44,19 @@ export const GridArea = styled.div`
   display: flex;
   justify-content: flex-end;
 
-  @media (max-width: 768px) {
+  @media(max-width: 768px) {
     justify-content: center;
-    margin-inline: 20px;
+    margin: 0 1.25rem;
   }
 `;
 
 export const Grid = styled.div`
-  width: 430px;
+  width: 26.25rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  @media (max-width: 412px) {
+  gap: 0.625rem;
+
+  @media(max-width: 425px) {
     grid-template-columns: repeat(3, 1fr);
   }
 `;
